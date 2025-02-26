@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-#include <memory>
+// #include <memory>
 #include <vector>
 #include <list>
 #include <deque>
@@ -10,7 +10,7 @@
 #include <unordered_set>
 #include <unordered_map>
 #include <array>
-#include <stack>
+// #include <stack>
 #include <type_traits>
 #include <concepts>
 #include <functional>
@@ -20,7 +20,7 @@
 
 // Serialization concepts
 namespace SerializationConcepts {
-	template <typename T, typename = void>
+	template <typename T, typename U = void>
 	struct IsSerializable;
 
 	template<class T>
@@ -126,7 +126,7 @@ namespace SerializationConcepts {
 	//	Serializable<typename T::value_type>;
 	//};
 
-	template <typename T, typename = void>
+	template <typename T, typename U>
 	struct IsSerializable : std::false_type {};
 
 	template <typename T>
